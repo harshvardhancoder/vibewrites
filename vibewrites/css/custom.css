@@ -1,0 +1,505 @@
+/* General Section Styling */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+}
+.logo-img {
+  max-width: 100%;
+  height: auto;
+  width: 150px; /* adjust as needed */
+}
+.footer__copyright small {
+  color: #fff; /* white base text */
+  text-shadow:
+    0 0 5px #ff66cc,     /* pink glow */
+    0 0 10px #ff66cc,
+    0 0 20px #ff66cc,
+    0 0 30px #ff99dd,
+    0 0 40px #ff99dd,
+    0 0 60px #ff66cc,
+    0 0 80px #ff99dd;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+
+.footer-logo-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 20px 0 !important;
+}
+
+.footer-logo {
+  max-width: 150px !important;
+  height: auto !important;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #00ffff;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+}
+
+/* Container Fixes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Post Card */
+.post {
+  background-color: #1a1a1a;
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,255,255,0.2);
+  transition: transform 0.3s ease;
+}
+.post:hover {
+  transform: translateY(-5px);
+}
+
+.post__thumbnail img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post__info {
+  padding: 1rem;
+}
+
+.post__title {
+  font-size: 1.2rem;
+  color: #00ffff;
+  margin: 0.5rem 0;
+}
+
+.post__title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post__body {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.post__author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.post__author-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.category__button {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  background-color: #00ffff;
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.category__buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Swiper Navigation */
+.swiper-button-next,
+.swiper-button-prev {
+  color: white;
+}
+
+.swiper-pagination-bullet {
+  background: #00ffff;
+}
+
+/* Hero Slider */
+.hero-slider {
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.hero-slide {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-slide-content {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  max-width: 600px;
+  margin-left: 2rem;
+  border-radius: 10px;
+}
+
+.hero-slide-content h2 {
+  font-size: 2rem;
+  color: #00ffff;
+}
+
+.hero-slide-content p {
+  color: #ddd;
+  margin: 1rem 0;
+}
+
+.hero-slide .author-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-slide .author-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-slide-content {
+    margin-left: 1rem;
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .post__title {
+    font-size: 1rem;
+  }
+
+  .post__body {
+    font-size: 0.8rem;
+  }
+}
+.news-ticker {
+  margin-top: 0 !important;
+  padding: 10px 0;
+  background: #ff2d95; /* bright pink neon background */
+  color: #fff;         /* white text */
+  overflow: hidden;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.news-ticker, 
+.news-ticker > .ticker-wrapper,
+.news-ticker > .ticker-wrapper > .ticker-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.ticker-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: tickerMove 20s linear infinite;
+}
+
+.ticker-content a {
+  color: #fff;  /* plain white links */
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.ticker-content a:hover {
+  text-decoration: underline;
+}
+
+@keyframes tickerMove {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* Remove margin/padding from hero slider and news ticker */
+
+.news-ticker,
+
+.news-ticker * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* If hero slider has bottom margin or padding, remove it */
+.hero-slider {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Make ticker flush immediately below hero slider */
+.news-ticker {
+  margin-top: 0 !important;
+  padding-top: 10px; /* Optional: keep some vertical padding inside ticker */
+}
+.circular-categories {
+  position: relative;
+  padding: 20px 0;
+}
+
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.circular-categories-container {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  flex: 1;
+}
+
+.circular-categories-container::-webkit-scrollbar {
+  display: none;
+}
+
+.circular-category {
+  flex: 0 0 calc((100% - 48px) / 3);
+  scroll-snap-align: center;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circular-category .category-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 10px #ff00aa;
+  margin-bottom: 8px;
+}
+
+.circular-category .category-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.slider-arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 0 12px;
+  z-index: 1;
+  user-select: none;
+}
+.circular-users {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.slider-title {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.user-slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.user-slider {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.circular-user {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circular-user .user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 10px #ff00aa;
+  margin-bottom: 8px;
+}
+
+.circular-user .user-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.slider-btn {
+  background: #ff00aa;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1;
+}
+.spotlight-section {
+  padding: 2rem 0;
+  background: #111; /* dark background */
+  color: #fff;
+}
+
+.spotlight-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #ff00aa; /* neon pink */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.spotlight-swiper {
+  position: relative;
+}
+
+.spotlight-item {
+  background: #222;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #ff00aa88;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.spotlight-item:hover {
+  transform: scale(1.05);
+}
+
+.spotlight-thumb {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px #ff00aa;
+  position: relative;
+  z-index: 1;
+}
+
+.spotlight-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #ff00aa;
+}
+
+.spotlight-info p {
+  font-size: 0.9rem;
+  color: #ddd;
+  flex-grow: 1;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: #fff;
+  background: #ff00aa;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.read-more:hover {
+  background: #e60094;
+}
+
+/* Swiper arrows */
+
+
+.swiper-button-prev, .swiper-button-next {
+  color: white;
+}
+.mySwiper {
+  position: relative;
+  padding: 20px 70px; /* Add enough left and right padding for nav buttons */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 35px;
+
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 8px #ff00ff;
+  color: #fff;
+  z-index: 10;
+}
+
+/* Position prev button to the left inside the padding */
+/* Shift arrows OUTSIDE the slider container */
+
+
+
