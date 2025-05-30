@@ -341,9 +341,9 @@ slider.parentElement.addEventListener('mouseleave', () => {
         $all_users_query = "SELECT * FROM users";
         $all_users_result = mysqli_query($connection, $all_users_query);
         while ($user = mysqli_fetch_assoc($all_users_result)): ?>
-          <a href="<?= ROOT_URL ?>user-posts.php?id=<?= $user['id'] ?>" class="swiper-slide circular-category">
+          <a href="<?= ROOT_URL ?>user-posts.php?id=<?= $user['id'] ?>" title="<?= htmlspecialchars($user['firstname']) ?>" class="swiper-slide circular-category">
             <div class="category-icon" style="background-image: url('images/<?= htmlspecialchars($user['avatar']) ?>');"></div>
-            <span class="category-name"><?= htmlspecialchars($user['firstname']) ?></span>
+  
           </a>
         <?php endwhile; ?>
       </div>
